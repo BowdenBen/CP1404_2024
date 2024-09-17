@@ -6,11 +6,12 @@ Broken program to determine score status
 # TODO: Fix this!
 
 score = float(input("Enter score: "))
-while 0 < score <= 100:
+while 0 <= score <= 100:
     if 90 <= score < 100:
         print("Excellent")
     elif 50 <= score < 90:
         print("Passable")
     else :
         print("Poor")
+    score = float(input("Enter score: "))
 print("Invalid Score")
