@@ -14,15 +14,25 @@ Get number of items
     display total
 """
 
-number_of_items = int(input("Enter the number of items: "))
-while number_of_items > 0:
+number_of_items = int(input("Enter the number of items (0 to quit): "))
+while number_of_items < 0:
+    print("Invalid number of items!")
+    number_of_items = int(input("Enter the number of items (0 to quit): "))
+
+if number_of_items > 0:
+    total_price = 0  # Initialize total price for this transaction
+
+    # Inner loop to get the price of each item
     for i in range(1, number_of_items + 1):
-        price = float(input("Price of item: $"))
-        total_price =+ price
-        if total_price >= 100:
-            new_total_price = total_price * 0.9
-        else:
-            new_total_price = total_price
-        print(f"Total price for {number_of_items} items is ${new_total_price:.2f}")
-print("Thankyou and please come again")
+        price = float(input(f"Price of item {i}: $"))
+        total_price += price
+
+    # Apply a 10% discount if total price is over $100
+    if total_price > 100:
+        total_price *= 0.9  # Apply 10% discount
+
+# Display the total price formatted to two decimal places
+print(f"Total price for {number_of_items} items is ${total_price:.2f}")
+
+print("Thank you and please come again")
 
