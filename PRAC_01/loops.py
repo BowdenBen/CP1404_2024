@@ -5,3 +5,7 @@ print()
 for j in range(0,110,10):
     print(j, end=' ')
 print()
+
+for k in range(20,0,-1):
+    print(k, end=' ')
+print()
