@@ -16,12 +16,15 @@ while choice != quit option
 do final thing, if needed
 """
 
-name = input("Enter your name: ")
-Menu = """ (H)ello
+# Store Menu in MENU variable
+MENU = """(H)ello
 (G)oodbye
 (Q)uit"""
-choice = input(">>> ").upper()
-while choice != Q:
+name = input("Enter your name: ") # Get name from user, store in name variable
+print (MENU)
+choice = input(">>> ").upper() # Get menu choice from user, store in choice variable, convert input to upper case
+while choice != "Q": # While Q is not selected, run loop
+    """ If, elif, else statement to deal with menu selection. """
     if choice == "H":
         print(f"Hello {name}")
         choice = input(">>> ").upper()
