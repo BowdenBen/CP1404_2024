@@ -16,7 +16,7 @@ while choice != quit option
 do final thing, if needed
 """
 
-# Store Menu in MENU variable
+# Store Menu in MENU constant
 MENU = """(H)ello
 (G)oodbye
 (Q)uit"""
